@@ -32,6 +32,7 @@ function ContactGmail() {
       let link = mails[i].getPermalink(); // Gmailリンク
 
       let post_array = [
+        [],
         ["date:" + Utilities.formatDate(date, 'Asia/Tokyo', 'yyyy/MM/dd hh:mm:ss')],
         ["subject:" + subject],
         ["from:" + froms],
@@ -51,7 +52,7 @@ function SetData() {
 
 function SendMessage(content) {
   // トークン情報
-  const TOKEN = "xxxxxxxxxxxxxxxxxxxxxxxxxx"
+  const TOKEN = "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx"
   const url = "https://notify-api.line.me/api/notify"
 
   var data = {
